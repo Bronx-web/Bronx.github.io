@@ -87,7 +87,7 @@ h3 { font-size: 1.8rem; }
     background: none;
     border: none;
     color: var(--text-secondary);
-    font-size: 0.60rem;
+    font-size: 0.70rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -247,6 +247,116 @@ h3 { font-size: 1.8rem; }
     border: 1px solid var(--border);
 }
 
+
+/* ==================== CONTACT FORM ==================== */
+.contact-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 20px 30px rgba(13, 217, 255, 0.05);
+    transition: all 0.3s ease;
+    max-width: 500px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .contact-card {
+        width: 90%;
+        max-width: 368px;
+        margin: 1rem auto;
+    }
+}
+
+.contact-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 30px rgba(13, 217, 255, 0.15);
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    background-color: var(--surface-alt);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-family: inherit;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-secondary);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--accent);
+    background-color: var(--bg-lighter);
+    box-shadow: 0 0 20px rgba(13, 217, 255, 0.1);
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-note {
+    text-align: center;
+    font-size: 0.45rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.info-item {
+    padding: 1.5rem;
+}
+
+.info-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.info-item p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+
 /* ==================== FOOTER LINKS & TEXT ==================== */
 .footer {
     background: black;
@@ -295,23 +405,6 @@ h3 { font-size: 1.8rem; }
         padding: 1rem; /* reduce from 20px */
     }
 
-    h1 {
-        font-size: 2.2rem; /* was 3.5rem → much smaller on phone */
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    h3 {
-        font-size: 1.4rem; /* key fix: headings were too big */
-    }
-
-    p, li {
-        font-size: 0.95rem; /* slightly smaller body text for readability */
-    }
-
-    /* Fix services cards on mobile */
     .services-container {
         display: flex;
         flex-direction: column; /* force vertical stack */
@@ -320,7 +413,7 @@ h3 { font-size: 1.8rem; }
     }
 
     .stat-card.service-card {
-        width: 100%; /* full width on mobile */
+        width: 90%; /* full width on mobile */
         max-width: 380px; /* cap it so it doesn't stretch too wide on larger phones */
         padding: 1.5rem; /* was 50px → much less internal space */
         margin: 0.5rem 0; /* reduce external spacing */
@@ -346,6 +439,7 @@ h3 { font-size: 1.8rem; }
 
     h1 { font-size: 2.5rem; }
     h2 { font-size: 2rem; }
+   
 
     .testimonial {
     background: var(--surface-alt);
