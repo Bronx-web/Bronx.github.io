@@ -49,7 +49,7 @@ h3 { font-size: 1.8rem; }
     top: 0;
     width: 100%;
     backdrop-filter: blur(6px);
-    background-color: rgba(15, 23, 42, 0.8);
+    background-color: rgba(7, 11, 20, 0.8);
     border-bottom: 1px solid var(--border);
     z-index: 1000;
     padding: 0 2rem;
@@ -213,7 +213,9 @@ h3 { font-size: 1.8rem; }
 }
 
 .case-study {
-    background: var(--surface);
+    background: rgba(0, 0, 0, 0.226);
+    backdrop-filter: blur(20px);
+    background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
     border: 1px solid var(--border);
     border-radius: 20px;
@@ -493,4 +495,34 @@ h3 { font-size: 1.8rem; }
 
 .stagger-3 {
     animation-delay: 0.3s;
+}
+
+/* Calendly Card - Floating Holographic */
+.calendly-card-holo {
+  background: rgba(45, 46, 48, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(68, 252, 23, 0.4);
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 50px auto;
+  max-width: 100%;
+  box-shadow: 0 20px 30px rgba(13, 217, 255, 0.05);
+  transform: translateY(0);
+  transition: transform 0.4s ease;
+}
+
+.calendly-card-holo:hover {
+  transform: translateY(-8px);
+}
+
+.calendly-card-holo .calendly-inline-widget {
+  border-radius: 14px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .calendly-card-holo {
+    margin: 51px 23px;
+  }
 }
