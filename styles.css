@@ -132,7 +132,7 @@ h3 { font-size: 1.8rem; }
     box-shadow: 0 10px 25px rgba(23, 237, 252, 0.3);
 }
 
-/* ==================== STATS ==================== */
+/* ==================================== STAT CARDS  ==================================== */
 .stats {
     display: flex;
     flex-direction: column;
@@ -526,7 +526,7 @@ h3 { font-size: 1.8rem; }
     margin: 51px 23px;
   }
 }
-/* ================================================================================= */
+/* ==================================    NOT IN USE =============================================== */
 /* Social & Review Buttons */
 .social-buttons,
 .google-review-btn-wrapper {
@@ -565,4 +565,101 @@ h3 { font-size: 1.8rem; }
 /* Optional: Make FB button container nicer */
 .fb-like {
   margin: 0 10px;
+
+}
+
+/* ================================ NOT IN USE ================================================ */
+
+
+/* =============================== FLOW CHART ON SERVIES PAGE ================================== */
+
+/* Container for steps */
+.how-it-works-steps {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 40px 0;
+}
+
+/* Connecting green line */
+.how-it-works-steps::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: var(--accent); /* your green accent */
+  border-radius: 3px;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* Step cards */
+.step-card {
+  position: relative;
+  background: rgba(0, 0, 0, 0.918);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 0 20px 30px rgba(0,0,0,0.5);
+  margin: 40px auto;
+  max-width: 600px;
+  padding: 40px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2; /* above the line */
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Step number */
+.step-card .step-number {
+  font-size: 4rem; /* big number */
+  font-weight: 800;
+  color: var(--accent);
+  background: var(--surface-alt);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 2;
+}
+
+/* Step text */
+.step-card .step-text p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .how-it-works-steps::before {
+    
+    transform: none;
+    width: 4px;
+  }
+  
+  .step-card {
+    max-width: 90%;
+    padding: 30px 20px 20px 20px;
+  }
+
+  .step-card .step-number {
+    font-size: 3rem;
+    width: 60px;
+    height: 60px;
+  }
 }
